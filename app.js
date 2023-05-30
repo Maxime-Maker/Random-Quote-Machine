@@ -9,21 +9,17 @@ const quotes = [
   "La théorie, c'est quand on sait tout et que rien ne fonctionne. La pratique, c'est quand tout fonctionne et que personne ne sait pourquoi. Ici, nous avons réuni théorie et pratique : Rien ne fonctionne... et personne ne sait pourquoi !",
   'Le langage de programmation que vous appréciez le plus est généralement celui dans lequel vous étiez le plus compétent.',
 ];
-const colors = ['rgb(255, 12, 0)'];
-const colorsBack = ['rgba(255, 12, 0 ,0.5)'];
+const colors = ['red', 'blue', 'yellow', 'green', 'grey'];
 
 const btn = document.querySelector('#btn');
-const color = document.querySelectorAll('.color');
+const r = document.querySelector(':root');
 const citation = document.querySelector('.cite');
-const icon = document.querySelector('.fas');
 
 function changeColor() {
   const colorGen = Math.floor(Math.random() * colors.length);
   const cit = Math.floor(Math.random() * quotes.length);
   citation.textContent = quotes[cit];
-  document.body.style.backgroundColor = colorsBack[colorGen];
-  btn.style.backgroundColor = colors[colorGen];
-  icon.style.color = colors[colorGen];
+  r.style.setProperty('--color', colors[colorGen]);
 }
 
 btn.addEventListener('click', changeColor);
