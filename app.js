@@ -25,3 +25,4 @@ function changeColor() {
 }
 
 btn.addEventListener('click', changeColor);
+changeColor();

@@ -24,6 +24,9 @@ nav div {
   flex-direction: row;
   padding: 1rem;
 }
+span i {
+  padding-inline: 0.5rem;
+}
 
 #btn {
   float: right;
