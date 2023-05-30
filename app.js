@@ -11,13 +11,17 @@ const quotes = [
 ];
 const colors = ['red', 'blue', 'yellow', 'green', 'grey'];
 const btn = document.querySelector('#btn');
-const color = document.querySelectorAll('color');
-const cita = document.getElementsByTagName('cite');
+const color = document.querySelectorAll('.color');
+const citation = document.querySelector('.cite');
+const icon = document.querySelector('.fas');
 
 function changeColor() {
-  const gener = Math.floor(Math.random(colors.length));
-  const cit = Math.floor(Math.random(quotes.length));
-  cita.textContent = quotes[cit];
+  const colorGen = Math.floor(Math.random() * colors.length);
+  const cit = Math.floor(Math.random() * quotes.length);
+  citation.textContent = quotes[cit];
+  document.body.style.backgroundColor = colors[colorGen];
+  btn.style.backgroundColor = colors[colorGen];
+  icon.style.color = colors[colorGen];
 }
-changeColor();
+
 btn.addEventListener('click', changeColor);
