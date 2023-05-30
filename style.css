@@ -8,11 +8,21 @@
 body {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   height: 100vh;
 }
 nav {
   width: 80vw;
   max-width: 1200px;
-  height: 200px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+nav div {
+  display: flex;
+  flex-direction: row;
+}
+
+#btn {
+  float: right;
 }
